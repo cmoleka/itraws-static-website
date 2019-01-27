@@ -18,7 +18,7 @@
 
 
     <div class="container-fluid pages-bg">
-        <nav class="navbar navbar-light row justify-content-start">
+        <nav class="navbar navbar-light row justify-content-start fixed-top _nav-bg">
             <button type="button" id="sidebarCollapse" class="btn text-white col-2" onclick="openNav()">
                 <i class="fas fa-align-left"></i> <span>Toggle Sidebar</span>
             </button>
@@ -185,23 +185,24 @@
 
         </div>
 
-        <footer class="justify-content-center">
-            <ul class="landing-social-media-flex ">
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/GitHub  - 60x60.svg" />
-                </li>
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/twitter  - 60x60.svg" />
-                </li>
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/Medium - 60x60.svg" />
-                </li>
-            </ul>
+        <footer class="container">
+            <div class="row align-items-center">
+                <div class="col text-center align-middle">
+                    <!--Social and footer-->
 
-            <div class="text-center footer-txt-styling">
-                © 2019 ITRAWS. All rights reserved.
-                <div class="text-center mobile-footer-txt-styling">
-                    TERMS • PRIVACY • BLOG • CONTACT
+                    <div class="mb-5 align-items-center">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/GitHub  - 60x60.svg" alt="Responsive">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/Twitter  - 60x60.svg" alt="Responsive">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/Medium - 60x60.svg" alt="Responsive">
+                    </div>
+
+                    <p class="text-center _blog-featured-date">
+                        © 2019 ITRAWS. All rights reserved.
+                    </p>
+                    <p class="text-center _blog-featured-date d-none d-lg-block">
+                        TERMS • PRIVACY • BLOG • CONTACT
+                    </p>
+                    <!---->
                 </div>
             </div>
         </footer>

@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="css/sidebar.css" />
 </head>
 
-<body class="index-graphic-bg">
+<body class="index-graphic-bg vh-100">
     <div class="index-gradient-bg-overlay-layer-2"></div>
     <div id="particles-js" class="index-particles-bg-overlay"></div>
     <div class="index-gradient-bg-overlay"></div>
 
+
     <div class="container-fluid">
-        <nav class="navbar navbar-light row justify-content-start">
+        <nav class="navbar navbar-light row justify-content-start fixed-top">
             <button type="button" id="sidebarCollapse" class="btn text-white col-2" onclick="openNav()">
                 <i class="fas fa-align-left"></i> <span>Toggle Sidebar</span>
             </button>
@@ -77,33 +78,33 @@
 
         </aside>
 
-        <header class="row align-items-center">
-            <div class="_header-container text-center col">
-                <img id="logo" class="img-fluid" alt="Responsive image" src="assets/img/brand/logo-new.svg" />
-            </div>
-        </header>
+        <div class="container vh-100">
+            <div class="row vh-100 align-items-center">
+                <div class="col-12 text-center align-middle">
+                    <img id="logo" class="align-middle mb-5" alt="Responsive image" src="assets/img/brand/logo-new.svg" />
+                    <!--Social and footer-->
 
-        <footer class="justify-content-center ">
-            <ul class="landing-social-media-flex ">
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/GitHub  - 60x60.svg" />
-                </li>
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/twitter  - 60x60.svg" />
-                </li>
-                <li>
-                    <img class="social-media-icons-60" src="assets/img/Medium - 60x60.svg" />
-                </li>
-            </ul>
+                    <div class="mb-5 align-items-center">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/GitHub  - 60x60.svg" alt="Responsive">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/Twitter  - 60x60.svg" alt="Responsive">
+                        <img class="social-media-icons-60 mx-4" src="assets/img/Medium - 60x60.svg" alt="Responsive">
+                    </div>
 
-            <div class="text-center footer-txt-styling">
-                © 2019 ITRAWS. All rights reserved.
-                <div class="text-center mobile-footer-txt-styling">
-                    TERMS • PRIVACY • BLOG • CONTACT
+                    <p class="text-center _blog-featured-date">
+                        © 2019 ITRAWS. All rights reserved.
+                    </p>
+                    <p class="text-center _blog-featured-date d-none d-lg-block">
+                        TERMS • PRIVACY • BLOG • CONTACT
+                    </p>
+                    <!---->
                 </div>
+
             </div>
-        </footer>
+
+
+        </div>
     </div>
+
 
     <script src="js/sidebar.js"></script>
     <script src="js/particles.js"></script>
