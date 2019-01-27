@@ -146,7 +146,7 @@ h3 {
 }
 
 .index-particles-bg-overlay {
-    min-height: 100vh;
+    height: 90vh;
     width: 100%;
     position: absolute;
     left: 0;
@@ -175,6 +175,7 @@ h3 {
 }
 
 .index-graphic-bg {
+
     background: url(../assets/img/graphic_bg@2x.png);
     background-repeat: no-repeat;
     background-position: center bottom;
