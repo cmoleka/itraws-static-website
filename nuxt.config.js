@@ -1,0 +1,124 @@
+const pkg = require('./package')
+const config = require('./.contentful.json')
+
+
+module.exports = {
+  mode: 'universal',
+
+  /*
+   ** Headers of the page
+   */
+  head: {
+    title: 'Itraws',
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'vuejs, nuxt, javascript, tutorials, development, software'
+      }
+    ],
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
+        integrity: 'sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Quicksand:400,500,700'
+      }
+    ]
+  },
+
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: '#fff'
+  },
+
+  /*
+   ** Global CSS
+   */
+  css: ['@/src/scss/style.scss', '@/src/scss/sidebar.scss'],
+
+  /*
+   ** Plugins to load before mounting the App
+   */
+  plugins: [
+    {
+    src: '~/plugins/vue-particles',
+    ssr: false
+  },
+   '~/plugins/contentful'
+  ],
+
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [
+    // Doc: https://bootstrap-vue.js.org/docs/
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
+  ],
+  // [optional] markdownit options
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
+  },
+  /*   Axios extend */
+  axios: {
+  // proxyHeaders: false
+  },
+
+  /*
+   ** Build configuration
+   */
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {
+      // Run ESLint on save
+      // if (ctx.isDev && ctx.isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/,
+      //     options: {
+      //       fix: true
+      //     }
+      //   })
+      // }
+    }
+  },
+  /*
+  ** Define environment variables being available
+  ** in generate and browser context
+  */
+  env: {
+    CTF_SPACE_ID: config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN
+  }
+}

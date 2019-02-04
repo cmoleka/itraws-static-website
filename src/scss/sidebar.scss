@@ -4,82 +4,82 @@
 
 
 aside {
-    position: fixed;
-    //width: 0;
-    min-width: 250px;
-    max-width: 250px;
-    height: 100%;
-    top: 0;
-    left: -250px;
-    background: linear-gradient(#131114 0%, #190d22 100%);
-    z-index: 9999;
-    overflow-x: hidden;
-    transition: 0.5s;
+  position: fixed;
+  //width: 0;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  top: 0;
+  left: -250px;
+  background: linear-gradient(#131114 0%, #190d22 100%);
+  z-index: 9999;
+  overflow-x: hidden;
+  transition: 0.5s;
 
-    #_sidebar-dismiss {
-        width: 24.75px;
-        height: 24.75px;
-        position: absolute;
-        /* top right corner of the sidebar */
-        top: 10px;
-        right: 25px;
+  #_sidebar-dismiss {
+    width: 24.75px;
+    height: 24.75px;
+    position: absolute;
+    /* top right corner of the sidebar */
+    top: 10px;
+    right: 25px;
 
-        i {
-            color: $secondary;
-            font-size: 1.5rem;
-        }
-
+    i {
+      color: $secondary;
+      font-size: 1.5rem;
     }
 
-    ._sidebar-header {
-        padding: 20px;
-        height: 50px;
+  }
+
+  ._sidebar-header {
+    padding: 20px;
+    height: 50px;
+  }
+
+  ul {
+    ._sidebar-components {
+      padding: 20px 0 !important;
+    }
+
+    ._sidebar-section {
+      width: 100%;
+      background: #211d22;
+      border-top: 1px solid #332E34;
+
+      ._sidebar-title {
+        font-family: $font-Two;
+        font-weight: $bold-weight;
+        font-size: $medium-font;
+        text-align: left;
+        color: $secondary;
+        padding: .20em 1em;
+        text-transform: uppercase;
+        margin: 0;
+      }
     }
 
     ul {
-        ._sidebar-components {
-            padding: 20px 0 !important;
+      padding: .60rem 0 1.40rem 0;
+
+      li {
+        padding: .30em 1em;
+
+        a {
+          font-family: $font-One;
+          color: $primary;
+          font-size: $regular-font;
+          font-weight: $normal-weight;
+
+          &:hover {
+            color: $secondary;
+            text-decoration: none;
+
+          }
         }
 
-        ._sidebar-section {
-            width: 100%;
-            background: #211d22;
-            border-top: 1px solid #332E34;
-
-            ._sidebar-title {
-                font-family: $font-Two;
-                font-weight: $bold-weight;
-                font-size: $medium-font;
-                text-align: left;
-                color: $secondary;
-                padding: .20em 1em;
-                text-transform: uppercase;
-                margin: 0;
-            }
-        }
-
-        ul {
-            padding: .60rem 0 1.40rem 0;
-
-            li {
-                padding: .30em 1em;
-
-                a {
-                    font-family: $font-One;
-                    color: $primary;
-                    font-size: $regular-font;
-                    font-weight: $normal-weight;
-
-                    &:hover {
-                        color: $secondary;
-                        text-decoration: none;
-
-                    }
-                }
-
-            }
-        }
-
+      }
     }
+
+  }
 
 }
