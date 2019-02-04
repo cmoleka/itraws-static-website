@@ -84,20 +84,3 @@ dist
 sw.*
 
 # Files and folders to ignore
-
-src/js/
-src/js
-src/css
-src/*.html
-.DS_Store
-src/.DS_Store
-src/assets/.DS_Store
-src/assets/blog/.DS_Store
-src/assets/blog/img/featured-min.jpeg
-src/assets/img/.DS_Store
-src/assets/img/brand/.DS_Store
-src/assets/img/brand/*.svg
-src/assets/img/*.png
-static/blog/img/*.jpeg
-static/icons/*.svg
-static/social/*.svg
