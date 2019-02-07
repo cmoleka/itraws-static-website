@@ -5,7 +5,8 @@
     </div>
     <div class="_sidebar-header"></div>
     <ul class="list-unstyled _sidebar-components">
-      <div class="_sidebar-section">
+    <div v-show="display">
+        <div class="_sidebar-section">
         <p class="_sidebar-title">Projects</p>
       </div>
       <ul class="list-unstyled">
@@ -17,6 +18,7 @@
           </nuxt-link>
         </li>
       </ul>
+    </div>
 
       <div class="_sidebar-section">
         <p class="_sidebar-title">News</p>
@@ -54,7 +56,8 @@ export default {
   },
   data() {
     return {
-      links: {}
+      links: {},
+      display: false
     }
   },
   created() {
