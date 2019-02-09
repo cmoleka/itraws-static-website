@@ -3,9 +3,9 @@
     <h1 class="text-center">{{ data.title }}</h1>
     <p class="project-description-2">{{ data.description }}</p>
     <div class="text-center" v-show="data.displaySubHeadlineLink">
-      <a :href="data.subLinkUrl" class="project-link">{{
-        data.subLinkTitle
-      }}</a>
+      <a :href="data.subLinkUrl" class="project-link">
+        {{ data.subLinkTitle }}
+      </a>
     </div>
     <div
       v-for="(section, index) in data.contentSection"
@@ -20,24 +20,6 @@
         class="project-description"
         v-html="$md.render(section.fields.sectionContent)"
       />
-
-      <div class="card-deck _about-values-container row _about-spacing">
-        <div
-          class="col-sm-6"
-          v-for="card in section.fields.sectionCards"
-          :key="card.id"
-        >
-          <div class="card bg-transparent border-0">
-            <div class="card-body">
-              <h3 class="text-center">{{ card.fields.title }}</h3>
-              <p
-                class="project-description-3 text-center"
-                v-html="$md.render(card.fields.content)"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -72,3 +54,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+hr {
+  border-color: rgba(255, 255, 255, 0.384) !important;
+}
+</style>
