@@ -3,25 +3,29 @@
     <h1 class="text-center">{{ data.title }}</h1>
     <p class="project-description-2">{{ data.description }}</p>
     <div class="text-center" v-show="data.displaySubHeadlineLink">
-      <a :href="data.subLinkUrl" class="project-link">
-        {{
+      <a :href="data.subLinkUrl" class="project-link">{{
         data.subLinkTitle
-        }}
-      </a>
+      }}</a>
     </div>
-    <div v-for="(section, index) in data.contentSection" :index="index" :key="index.id">
+    <div
+      v-for="(section, index) in data.contentSection"
+      :index="index"
+      :key="index.id"
+    >
       <div class="_about-spacing-2">
         <h2 class="text-center">{{ section.fields.sectionHeading }}</h2>
       </div>
 
-      <p class="project-description" v-html="$md.render(section.fields.sectionContent)"/>
+      <p
+        class="project-description"
+        v-html="$md.render(section.fields.sectionContent)"
+      />
 
       <div class="card-deck _about-values-container row _about-spacing">
         <div
           class="col-sm-6"
-          v-for="(card, index) in section.fields.sectionCards"
-          :key="index.id"
-          :index="index"
+          v-for="card in section.fields.sectionCards"
+          :key="card.id"
         >
           <div class="card bg-transparent border-0">
             <div class="card-body">

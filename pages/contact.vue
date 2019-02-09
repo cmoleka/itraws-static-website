@@ -12,15 +12,18 @@
               :src="card.fields.icon.fields.file.url"
               class="img-fluid img-thumbnail _contact-icons-spacing bg-transparent border-0"
               :alt="card.fields.title"
-            >
+            />
             <h3 class="text-center">{{ card.fields.title }}</h3>
-            <p class="contact-description _contact-spacing-desc">{{ card.fields.content }}</p>
+            <p class="contact-description _contact-spacing-desc">
+              {{ card.fields.content }}
+            </p>
 
-            <div class="_contact-spacing text-center" v-show="card.fields.display">
+            <div
+              class="_contact-spacing text-center"
+              v-show="card.fields.display"
+            >
               <a :href="card.fields.linkUrl" class="project-link">
-                {{
-                card.fields.linkTitle
-                }}
+                {{ card.fields.linkTitle }}
               </a>
             </div>
           </div>
