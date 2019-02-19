@@ -41,10 +41,7 @@ export default {
     ]
   },
   asyncData() {
-    return Promise.all([
-      //This request, pulls the title and descript for the contact page
-      client.getEntry('6SvTsvrISxNJgFiE5iaEXg')
-    ])
+    return Promise.all([client.getEntry('6SvTsvrISxNJgFiE5iaEXg')])
       .then(entry => {
         return {
           data: entry[0].fields
