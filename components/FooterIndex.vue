@@ -8,7 +8,7 @@
         :social-image="social.image"
       />
     </div>
-    <footer-copy/>
+    <footer-copy />
   </div>
 </template>
 
@@ -27,6 +27,11 @@ export default {
           id: 'Github',
           link: 'https://github.com/itraws',
           image: 'social/github.svg'
+        },
+        {
+          id: 'Medium',
+          link: 'https://medium.com/itraws',
+          image: '/social/medium.svg'
         },
         {
           id: 'Twitter',

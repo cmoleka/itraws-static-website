@@ -34,6 +34,11 @@ export default {
           image: '/social/github.svg'
         },
         {
+          id: 'Medium',
+          link: 'https://medium.com/itraws',
+          image: '/social/medium.svg'
+        },
+        {
           id: 'Twitter',
           link: 'https://twitter.com/itraws',
           image: '/social/twitter.svg'

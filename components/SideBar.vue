@@ -25,7 +25,7 @@
       </div>
       <ul class="list-unstyled">
         <li>
-          <a href="https://blog.itraws.com" target="_blank">Blog</a>
+          <a href="https://medium.com/itraws" target="_blank">Blog</a>
         </li>
       </ul>
 
