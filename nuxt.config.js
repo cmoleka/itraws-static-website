@@ -71,10 +71,6 @@ module.exports = {
         href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
         integrity: 'sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/',
         crossorigin: 'anonymous'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Quicksand:400,500,700'
       }
     ]
   },
@@ -89,7 +85,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/src/scss/style.scss', '@/src/scss/sidebar.scss', '@/src/css/bootstrap.css'],
+  css: ['@/src/scss/style.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -127,22 +123,30 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    babel: {
+      presets({ isServer }) {
+        const targets = isServer ? { node: 'current' } : { ie: 11 }
+        return [
+          [ require.resolve('@nuxt/babel-preset-app'), { targets } ]
+        ]
+      }
+    },
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {
       // Run ESLint on save
-      // if (ctx.isDev && ctx.isClient) {
-      //   config.module.rules.push({
-      //     enforce: 'pre',
-      //     test: /\.(js|vue)$/,
-      //     loader: 'eslint-loader',
-      //     exclude: /(node_modules)/,
-      //     options: {
-      //       fix: true
-      //     }
-      //   })
-      // }
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
+        })
+      }
     }
   },
   /*

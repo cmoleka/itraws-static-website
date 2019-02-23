@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-light row justify-content-start fixed-top">
     <no-ssr placeholder="loading...">
-      <sidebar-toggle/>
+      <sidebar-toggle />
     </no-ssr>
   </nav>
 </template>
