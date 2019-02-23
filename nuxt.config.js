@@ -102,9 +102,8 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'bootstrap-vue/nuxt'
   ],
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
@@ -123,31 +122,24 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    babel: {
-      presets({ isServer }) {
-        const targets = isServer ? { node: 'current' } : { ie: 11 }
-        return [
-          [ require.resolve('@nuxt/babel-preset-app'), { targets } ]
-        ]
-      }
-    },
+
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true
-          }
-        })
-      }
-    }
+    // extend(config, ctx) {
+    //   // Run ESLint on save
+    //   if (ctx.isDev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/,
+    //       options: {
+    //         fix: true
+    //       }
+    //     })
+    //   }
+    // }
   },
   /*
   ** Define environment variables being available
