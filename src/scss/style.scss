@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Quicksand:400,500,700');
 // The two fonts used
 $font-One: 'Quicksand',
-sans-serif;
+sans-serif !important;
 $font-Two: 'Montserrat',
-sans-serif;
+sans-serif !important;
 // Font colors
 $primary: rgba(237, 237, 237, 0.75);
 $secondary: #ffffff;
@@ -23,23 +23,23 @@ $honey: #fefe00;
 }
 
 // Font Size
-$extra-small-font: 0.75em;
-$small-font: 0.85em;
-$regular-font: 0.95em;
-$medium-font: 20px;
-$large-font: 25px;
-$extra-large-font: 30px;
-$super-large-font: 50px;
+$extra-small-font: 0.75em !important;
+$small-font: 0.85em !important;
+$regular-font: 0.95em !important;
+$medium-font: 20px !important;
+$large-font: 25px !important;
+$extra-large-font: 30px !important;
+$super-large-font: 50px !important;
 // Font Weight
-$normal-weight: 400;
-$medium-weight: 500;
-$bold-weight: 700;
+$normal-weight: 400 !important;
+$medium-weight: 500 !important;
+$bold-weight: 700 !important;
 
 body {
-  font-family: $font-One !important;
-  color: $secondary !important;
-  letter-spacing: 1px !important;
-  font-weight: $normal-weight !important;
+  font-family: $font-One;
+  color: $secondary;
+  letter-spacing: 1px;
+  font-weight: $normal-weight;
 }
 
 //Dependencies
