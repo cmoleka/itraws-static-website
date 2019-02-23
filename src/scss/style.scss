@@ -6,13 +6,13 @@ sans-serif !important;
 $font-Two: 'Montserrat',
 sans-serif !important;
 // Font colors
-$primary: rgba(237, 237, 237, 0.75);
-$secondary: #ffffff;
-$warning: #ffcc00;
-$danger: #f90000;
-$water: #0098fe;
-$haze: #9600fc;
-$honey: #fefe00;
+$primary: rgba(237, 237, 237, 0.75) !important;
+$secondary: #ffffff !important;
+$warning: #ffcc00 !important;
+$danger: #f90000 !important;
+$water: #0098fe !important;
+$haze: #9600fc !important;
+$honey: #fefe00 !important;
 
 .text-haze {
   color: $haze;
@@ -49,7 +49,7 @@ button {
 
 h1 {
   font-family: $font-Two;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   font-size: $super-large-font;
   font-weight: $bold-weight;
 
@@ -60,7 +60,7 @@ h1 {
 
 h2 {
   font-family: $font-Two;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   font-size: $extra-large-font;
   font-weight: $bold-weight;
 
@@ -71,7 +71,7 @@ h2 {
 
 h3 {
   font-family: $font-Two;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   font-size: $medium-font;
   font-weight: $bold-weight;
 }
@@ -237,6 +237,7 @@ h3 {
 #contact-icons {
   width: 100%;
   max-height: 150px;
+  padding: 0 !important;
 
   @media (max-width: 750px) {
     height: 100px;
