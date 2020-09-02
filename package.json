@@ -20,7 +20,7 @@
     "@tryghost/content-api": "^1.0.0",
     "@vue/babel-preset-app": "^3.3.0",
     "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.0-rc.11",
+    "bootstrap-vue": "^2.0.0-rc.12",
     "contentful": "^7.1.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
